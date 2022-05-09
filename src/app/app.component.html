@@ -1,2 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>Start editing to see some magic happen :)</p>
+<!-- hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p -->
+<div style="text-align: center;">
+  <p>{{ title }}</p>
+  <nav>
+    <a routerLink="">Home</a> &nbsp;
+    <a routerLink="user">User</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
