@@ -12,9 +12,9 @@ export class UserComponent implements OnInit {
 
   users: User[] = [];
   ngOnInit() {
-    this.userSvc.getUsers().subscribe((response) => {
+    this.userSvc.getUsersFilter().subscribe((response) => {
       this.users = response;
-      console.log(JSON.stringify(this.users[0]));
+      // console.log('users:', JSON.stringify(this.users[0]));
     });
   }
 }
