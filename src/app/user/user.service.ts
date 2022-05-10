@@ -21,24 +21,21 @@ export class UserService {
     return this.apiServiceObj.get(url);
   }
 
-  getUserMap(): Observable<any> {
+  getUserMap(): Observable<User[]> {
     let url = 'https://jsonplaceholder.typicode.com/users';
     return this.apiServiceObj.get(url).pipe(
       map((val) => {
-        let newVal = val.map((element: User) => {
+        return val.map((element: User) => {
           return {
+            ...element,
             id: element.id + 1,
-            name: element.name,
-            email: element.email,
-            phone: element.phone,
           };
         });
-        return newVal;
       })
     );
   }
 
-  getUsersFilter(): Observable<any> {
+  getUsersFilter(): Observable<User[]> {
     let url = 'https://jsonplaceholder.typicode.com/users';
     return this.apiServiceObj.get(url).pipe(
       mergeMap((data) => data),
