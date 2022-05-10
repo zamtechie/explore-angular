@@ -12,7 +12,6 @@ import appRoutes from './routerConfig';
 import { HomeComponent } from './home/home.component';
 
 import { ApiService } from './service/api.service';
-import { UserService } from './user/user.service';
 
 @NgModule({
   imports: [
@@ -23,7 +22,7 @@ import { UserService } from './user/user.service';
     RouterModule.forRoot(appRoutes),
   ],
   declarations: [AppComponent, HelloComponent, HomeComponent],
-  providers: [ApiService, UserService],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
