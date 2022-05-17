@@ -10,7 +10,7 @@ const routes: Routes = [
     component: UserComponent,
   },
   {
-    path: '/adduser',
+    path: 'add-user',
     component: AddUserComponent,
   },
 ];
